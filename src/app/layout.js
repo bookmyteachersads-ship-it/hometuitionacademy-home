@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { ReduxProvider } from "./redux-provider";
 import { Toaster } from "react-hot-toast";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION;
@@ -81,6 +82,7 @@ export default function RootLayout({ children }) {
         <ReduxProvider>
           <AppLayout>{children}</AppLayout>
         </ReduxProvider>
+        <Analytics />
       </body>
     </html>
   );
