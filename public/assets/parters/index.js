@@ -1,0 +1,10 @@
+export const Bpartners = "/assets/parters/bronze-partner.png";
+export const A = "/assets/parters/icon-a.svg";
+export const Db = "/assets/parters/icon-db.svg";
+export const Iso = "/assets/parters/icon-iso.svg";
+export const Dprogramming = "/assets/parters/ios-developer-program.png";
+export const Microsoft = "/assets/parters/microsoft.png";
+export const Ncommerce = "/assets/parters/nop-commerce.png";
+export const Pnetworking = "/assets/parters/partner-network.png";
+export const Phero = "/assets/parters/partners-hero.png";
+export const Zoho = "/assets/parters/zoho.png";

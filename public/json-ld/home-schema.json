@@ -1,0 +1,76 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://Itsoftworld.com/#organization",
+      "name": "Itsoftworld",
+      "url": "https://Itsoftworld.com",
+      "logo": "https://Itsoftworld.com/assets/images/logo.png",
+      "telephone": "+91-7977757864",
+      "email": "info@Itsoftworld.com",
+      "sameAs": [
+        "https://www.facebook.com/people/Sg-Webapp-Techniques-Pvt-Ltd/61564439541569/",
+        "https://x.com/Itsoftworld",
+        "https://www.linkedin.com/company/sg-webapp-techniques-private-limited",
+        "https://www.instagram.com/Itsoftworld/?igsh=MWljbzFocTNmYWw0bQ%3D%3D#"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No - 12 , 2nd floor",
+        "addressLocality": "Kirti Nagar",
+        "addressRegion": "Delhi",
+        "postalCode": "110015",
+        "addressCountry": "IN"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-7977757864",
+          "contactType": "customer support",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Hindi"]
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Founder Name"
+      },
+      "description": "Itsoftworld delivers user-centric digital solutions, web and mobile applications, and custom software to help businesses grow.",
+      "knowsAbout": [
+        "web development",
+        "mobile apps",
+        "ui ux",
+        "digital strategy"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://Itsoftworld.com/#website",
+      "url": "https://Itsoftworld.com",
+      "name": "Itsoftworld",
+      "publisher": {
+        "@id": "https://Itsoftworld.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://Itsoftworld.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://Itsoftworld.com/#homepage",
+      "url": "https://Itsoftworld.com",
+      "name": "Itsoftworld — Home",
+      "isPartOf": {
+        "@id": "https://Itsoftworld.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://Itsoftworld.com/assets/images/hero-banner.jpg"
+      },
+      "description": "Itsoftworld provides innovative digital products, app development and development services to help businesses scale online."
+    }
+  ]
+}

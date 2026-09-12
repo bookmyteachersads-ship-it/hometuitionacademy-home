@@ -1,0 +1,654 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* theme  */
+:root {
+  /* Theme: Default */
+  --theme-default-primary: #f95008;
+  --theme-default-primary-light: #ffdec7;
+  --theme-default-primary-lightest: #fff7f2;
+
+  --theme-default-primary-dark: #c43800;
+  --theme-default-primary-base-selected: #ffe8db;
+  --theme-default-primary-charts: #ff7e42;
+  --theme-default-blight: #faede6;
+
+  /* Gray Scale */
+  --theme-default-white: #fff;
+  --theme-default-black: #000;
+  --theme-default-gray: #6d7081;
+  --theme-default-grays: #86889279;
+  --theme-default-gray-light: #f2f3f6;
+  --theme-default-gray-lightest: #fafafa;
+  --theme-default-gray-dark: #36344d;
+  --theme-default-gray-border: #dad9da;
+  --theme-default-gray-darker: #6d7081;
+
+  /* State Colors */
+  --theme-default-success: #00b090;
+  --theme-default-success-light: #def4f0;
+  --theme-default-success-dark: #008361;
+  --theme-default-info-light: #e0f8ff;
+  --theme-default-danger: #fc5185;
+  --theme-default-danger-light: #ffe8ef;
+  --theme-default-danger-dark: #d63163;
+  --theme-default-warning: #ffcd35;
+  --theme-default-warning-light: #fff8e2;
+  --theme-default-warning-charts: #ffcd35;
+  --theme-default-warning-dark: #fea419;
+  --theme-default-warning-dark-2: #9f6000;
+
+  /* Meteorite Colors */
+  --theme-default-meteorite: #ff6b2b;
+  --theme-default-meteorite-light: #ffe5d6;
+  --theme-default-meteorite-gray: #dadce03d;
+
+  --theme-default-meteorite-dark: #2c201a;
+  --theme-default-meteorite-dark-2: #140e0b;
+
+  /* UI Specific */
+  --theme-default-dark: #1d1e20;
+  --theme-default-white-blue: #faf6f3;
+  --theme-default-primary-timer: #f95008;
+  --theme-default-black-timer: #343434;
+  --theme-default-periwinkle: #f0ddd3;
+  --theme-default-general-border-color: #dadce0;
+  --theme-default-highlighted-card-bg: #fff0e6;
+  --theme-default-highlighted-card-text: #b83400;
+}
+
+.blue-theme {
+  /* Theme: Blue */
+  --theme-default-primary: #0073e6;
+  --theme-default-primary-light: #d2e7ff;
+  --theme-default-primary-lightest: #f0f8ff;
+  --theme-default-primary-dark: #005bb5;
+  --theme-default-primary-base-selected: #e6f2ff;
+  --theme-default-primary-charts: #4da3ff;
+
+  /* Gray Scale */
+  --theme-default-white: #ffffff;
+  --theme-default-black: #000000;
+  --theme-default-gray: #6d7081;
+  --theme-default-gray-light: #f2f3f6;
+  --theme-default-gray-dark: #36344d;
+  --theme-default-gray-border: #dad9da;
+  --theme-default-gray-darker: #6d7081;
+
+  /* State Colors */
+  --theme-default-success: #00b090;
+  --theme-default-success-light: #def4f0;
+  --theme-default-success-dark: #008361;
+  --theme-default-info-light: #e0f8ff;
+  --theme-default-danger: #fc5185;
+  --theme-default-danger-light: #ffe8ef;
+  --theme-default-danger-dark: #d63163;
+  --theme-default-warning: #ffcd35;
+  --theme-default-warning-light: #fff8e2;
+  --theme-default-warning-charts: #ffcd35;
+  --theme-default-warning-dark: #fea419;
+  --theme-default-warning-dark-2: #9f6000;
+
+  /* Meteorite Colors */
+  --theme-default-meteorite: #007acc;
+  --theme-default-meteorite-light: #cce7ff;
+  --theme-default-meteorite-gray: #dadce03d;
+
+  --theme-default-meteorite-dark: #004a7f;
+  --theme-default-meteorite-dark-2: #002b4d;
+
+  /* UI Specific */
+  --theme-default-dark: #1d1e20;
+  --theme-default-white-blue: #f4faff;
+  --theme-default-primary-timer: #5aa6ff;
+  --theme-default-black-timer: #343434;
+  --theme-default-periwinkle: #cce1ff;
+  --theme-default-general-border-color: #dadce0;
+  --theme-default-highlighted-card-bg: #eaf4ff;
+  --theme-default-highlighted-card-text: #004a7f;
+}
+
+.teal-theme {
+  /* Theme: Teal */
+  --theme-default-primary: #008080; /* Teal */
+  --theme-default-primary-light: #b2f0f0; /* Light Teal */
+  --theme-default-primary-lightest: #e0f9f9; /* Very Light Teal */
+  --theme-default-primary-dark: #006666; /* Dark Teal */
+  --theme-default-primary-base-selected: #cce8e8; /* Soft Teal */
+  --theme-default-primary-charts: #4db6b6; /* Teal for charts */
+
+  /* Gray Scale */
+  --theme-default-white: #ffffff; /* White */
+  --theme-default-black: #000000; /* Black */
+  --theme-default-gray: #6d7081; /* Gray */
+  --theme-default-gray-light: #f2f3f6; /* Light Gray */
+  --theme-default-gray-dark: #36344d; /* Dark Gray */
+  --theme-default-gray-border: #dad9da; /* Border Gray */
+  --theme-default-gray-darker: #6d7081; /* Darker Gray */
+
+  /* State Colors */
+  --theme-default-success: #00b090; /* Success (Tealish) */
+  --theme-default-success-light: #def4f0; /* Light Success */
+  --theme-default-success-dark: #008361; /* Dark Success */
+  --theme-default-info-light: #e0f8ff; /* Info Light (Light Cyan) */
+  --theme-default-danger: #fc5185; /* Danger (Pink) */
+  --theme-default-danger-light: #ffe8ef; /* Light Danger */
+  --theme-default-danger-dark: #d63163; /* Dark Danger */
+  --theme-default-warning: #ffcd35; /* Warning (Yellow) */
+  --theme-default-warning-light: #fff8e2; /* Light Warning */
+  --theme-default-warning-charts: #ffcd35; /* Warning for Charts */
+  --theme-default-warning-dark: #fea419; /* Dark Warning */
+  --theme-default-warning-dark-2: #9f6000; /* Darker Warning */
+
+  /* Meteorite Colors */
+  --theme-default-meteorite: #00b8b8; /* Meteorite Teal */
+  --theme-default-meteorite-light: #cce8e8; /* Light Meteorite */
+  --theme-default-meteorite-gray: #dadce03d; /* Gray Meteorite */
+
+  --theme-default-meteorite-dark: #006666; /* Dark Meteorite */
+  --theme-default-meteorite-dark-2: #004d4d; /* Darker Meteorite */
+
+  /* UI Specific */
+  --theme-default-dark: #1d1e20; /* Dark UI Elements */
+  --theme-default-white-blue: #f4faff; /* Light Blue UI */
+  --theme-default-primary-timer: #56c5c5; /* Teal Timer */
+  --theme-default-black-timer: #343434; /* Timer Black */
+  --theme-default-periwinkle: #cce8e8; /* Periwinkle Blue */
+  --theme-default-general-border-color: #dadce0; /* General Border Color */
+  --theme-default-highlighted-card-bg: #e5f8f8; /* Highlighted Card Background */
+  --theme-default-highlighted-card-text: #006666; /* Highlighted Card Text */
+}
+
+.cyan-theme {
+  /* Theme: Cyan */
+  --theme-default-primary: #00bcd4; /* Cyan */
+  --theme-default-primary-light: #66e1e7; /* Light Cyan */
+  --theme-default-primary-lightest: #e0f7fa; /* Very Light Cyan */
+  --theme-default-primary-dark: #008c99; /* Dark Cyan */
+  --theme-default-primary-base-selected: #b2ebf2; /* Soft Cyan */
+  --theme-default-primary-charts: #4cc2cc; /* Cyan for charts */
+
+  /* Gray Scale */
+  --theme-default-white: #ffffff; /* White */
+  --theme-default-black: #000000; /* Black */
+  --theme-default-gray: #6d7081; /* Gray */
+  --theme-default-gray-light: #f2f3f6; /* Light Gray */
+  --theme-default-gray-dark: #36344d; /* Dark Gray */
+  --theme-default-gray-border: #dad9da; /* Border Gray */
+  --theme-default-gray-darker: #6d7081; /* Darker Gray */
+
+  /* State Colors */
+  --theme-default-success: #00b090; /* Success (Tealish) */
+  --theme-default-success-light: #def4f0; /* Light Success */
+  --theme-default-success-dark: #008361; /* Dark Success */
+  --theme-default-info-light: #e0f8ff; /* Info Light (Light Cyan) */
+  --theme-default-danger: #fc5185; /* Danger (Pink) */
+  --theme-default-danger-light: #ffe8ef; /* Light Danger */
+  --theme-default-danger-dark: #d63163; /* Dark Danger */
+  --theme-default-warning: #ffcd35; /* Warning (Yellow) */
+  --theme-default-warning-light: #fff8e2; /* Light Warning */
+  --theme-default-warning-charts: #ffcd35; /* Warning for Charts */
+  --theme-default-warning-dark: #fea419; /* Dark Warning */
+  --theme-default-warning-dark-2: #9f6000; /* Darker Warning */
+
+  /* Meteorite Colors */
+  --theme-default-meteorite: #00b8b8; /* Meteorite Cyan */
+  --theme-default-meteorite-light: #cce8e8; /* Light Meteorite */
+  --theme-default-meteorite-gray: #dadce03d; /* Gray Meteorite */
+
+  --theme-default-meteorite-dark: #007f7f; /* Dark Meteorite */
+  --theme-default-meteorite-dark-2: #005757; /* Darker Meteorite */
+
+  /* UI Specific */
+  --theme-default-dark: #1d1e20; /* Dark UI Elements */
+  --theme-default-white-blue: #f4faff; /* Light Blue UI */
+  --theme-default-primary-timer: #5ac8c8; /* Cyan Timer */
+  --theme-default-black-timer: #343434; /* Timer Black */
+  --theme-default-periwinkle: #cce8e8; /* Periwinkle Blue */
+  --theme-default-general-border-color: #dadce0; /* General Border Color */
+  --theme-default-highlighted-card-bg: #e0f7fa; /* Highlighted Card Background */
+  --theme-default-highlighted-card-text: #008c99; /* Highlighted Card Text */
+}
+
+.dark-theme {
+  /* Theme: Dark */
+  --theme-default-primary: #1d1f21; /* Dark Primary */
+  --theme-default-primary-light: #d0d0d0; /* Light Dark */
+  --theme-default-primary-lightest: #eeeeee; /* Very Light Dark */
+  --theme-default-primary-dark: #0d0f12; /* Darkest Primary */
+  --theme-default-primary-base-selected: #2c2f33; /* Soft Dark */
+  --theme-default-primary-charts: #3e4246; /* Dark Charts */
+
+  /* Gray Scale */
+  --theme-default-white: #ffffff; /* White */
+  --theme-default-black: #000000; /* Black */
+  --theme-default-gray: #6d7081; /* Gray */
+  --theme-default-gray-light: #f2f3f6; /* Light Gray */
+  --theme-default-gray-dark: #36344d; /* Dark Gray */
+  --theme-default-gray-border: #444b56; /* Border Gray */
+  --theme-default-gray-darker: #2e3237; /* Darker Gray */
+
+  /* State Colors */
+  --theme-default-success: #00b090; /* Success (Tealish) */
+  --theme-default-success-light: #def4f0; /* Light Success */
+  --theme-default-success-dark: #008361; /* Dark Success */
+  --theme-default-info-light: #e0f8ff; /* Info Light (Light Cyan) */
+  --theme-default-danger: #fc5185; /* Danger (Pink) */
+  --theme-default-danger-light: #ffe8ef; /* Light Danger */
+  --theme-default-danger-dark: #d63163; /* Dark Danger */
+  --theme-default-warning: #ffcd35; /* Warning (Yellow) */
+  --theme-default-warning-light: #fff8e2; /* Light Warning */
+  --theme-default-warning-charts: #ffcd35; /* Warning for Charts */
+  --theme-default-warning-dark: #fea419; /* Dark Warning */
+  --theme-default-warning-dark-2: #9f6000; /* Darker Warning */
+
+  /* Meteorite Colors */
+  --theme-default-meteorite: #2f1c6a; /* Meteorite Dark Purple */
+  --theme-default-meteorite-light: #6f4b9b; /* Light Meteorite */
+  --theme-default-meteorite-gray: #dadce03d; /* Gray Meteorite */
+
+  --theme-default-meteorite-dark: #000000; /* Dark Meteorite */
+  --theme-default-meteorite-dark-2: #100c1f; /* Darker Meteorite */
+
+  /* UI Specific */
+  --theme-default-dark: #1d1e20; /* Dark UI Elements */
+  --theme-default-white-blue: #2c2f36; /* Soft Blue for UI */
+  --theme-default-primary-timer: #8564eb; /* Timer Primary (Purple) */
+  --theme-default-black-timer: #343434; /* Timer Black */
+  --theme-default-periwinkle: #4c5060; /* Dark Periwinkle */
+  --theme-default-general-border-color: #444b56; /* General Border Color */
+  --theme-default-highlighted-card-bg: #2f343a; /* Highlighted Card Background */
+  --theme-default-highlighted-card-text: #a1b2cd; /* Light Text on Card */
+}
+
+/* end  */
+
+body,
+html {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+}
+
+.btn-shadow {
+  box-shadow: inset -2px -2px 2px rgba(7, 13, 29, 0.3);
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto w-full sm:w-[90%] lg:w-[85%] xl:w-[80%];
+  }
+  .small-container {
+    @apply mx-auto w-full sm:w-[85%] lg:w-[75%] xl:w-[65%] 2xl:w-[60%];
+  }
+  .primary-btn-sm {
+    @apply px-7  text-white font-semibold bg-primary text-[14px] h-[45px] flex-center hover:opacity-70;
+  }
+  .primary-btn-md {
+    @apply px-7 xl:px-9 text-white font-semibold bg-primary text-[14px] sm:text-[15px] lg:text-[15px] h-[50px] sm:h-[55px] flex-center hover:opacity-70;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .heading {
+    @apply text-[1.5rem] sm:text-[2rem] md:text-[2.3rem] xl:text-[2.5rem] font-bold leading-[1.2];
+  }
+  .heading-sm {
+    @apply text-[1.5rem] sm:text-[1.7rem] md:text-[1.9rem] xl:text-[2rem] font-bold leading-[1.2];
+  }
+  .menu-item-md {
+    @apply font-semibold text-meteoriteDark2 text-sm xl:text-base first-letter:capitalize hover:text-primary transition-all duration-200;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .page-wrapper {
+    @apply pt-[15%] sm:pt-[10%] lg:pt-[7%] xl:pt-[5%] 2xl:pt-[4%] pb-12 lg:pb-16;
+  }
+}
+input {
+  outline: none;
+}
+
+.border-gradient-primary {
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+  border-image-source: linear-gradient(to left, #6befdf, #005baa);
+}
+
+/*  post content sttyling  */
+/* Container styling */
+#single-articale-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* font-family: sans-serif; */
+  line-height: 1.7;
+  /* color: #333; */
+}
+
+/* Headings */
+#single-articale-details h1,
+#single-articale-details h2,
+#single-articale-details h3,
+#single-articale-details h4,
+#single-articale-details h5,
+#single-articale-details h6 {
+  margin: 1.2rem 0 0.6rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+#single-articale-details h1 {
+  font-size: 2rem;
+}
+#single-articale-details h2 {
+  font-size: 1.75rem;
+}
+#single-articale-details h3 {
+  font-size: 1.5rem;
+}
+#single-articale-details h4 {
+  font-size: 1.25rem;
+}
+#single-articale-details h5 {
+  font-size: 1rem;
+}
+#single-articale-details h6 {
+  font-size: 0.875rem;
+}
+
+/* Paragraphs */
+#single-articale-details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* Lists */
+#single-articale-details ul,
+#single-articale-details ol {
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+#single-articale-details li {
+  margin-bottom: 0.25rem;
+}
+
+/* Images */
+#single-articale-details img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 6px;
+}
+
+/* Blockquotes */
+#single-articale-details blockquote {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  color: #555;
+  font-style: italic;
+  background: var(--theme-default-primary-lightest);
+  border-radius: 0 20px 0 0;
+}
+#single-articale-details blockquote strong {
+  color: var(--accent);
+}
+
+/* Links */
+#single-articale-details a {
+  color: var(--accent);
+  background: var(--theme-default-primary-lightest);
+  padding: 3px 5px !important;
+  border-radius: 3px;
+  text-transform: capitalize;
+  font-size: 13px;
+  font-weight: 500;
+  /* text-decoration: underline; */
+}
+#single-articale-details a:hover {
+  text-decoration: underline;
+}
+
+/* Code blocks */
+#single-articale-details pre,
+#single-articale-details code {
+  /* font-family: monospace; */
+  background: #f4f4f4;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* Remove extra spacing often introduced by editors */
+#single-articale-details * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#single-articale-details p + p,
+#single-articale-details p + ul,
+#single-articale-details ul + p,
+#single-articale-details h1 + p,
+#single-articale-details h2 + p {
+  margin-top: 0.75rem !important;
+}
+
+#single-articale-details p:empty,
+#single-articale-details h1:empty,
+#single-articale-details h2:empty,
+#single-articale-details h3:empty,
+#single-articale-details h4:empty,
+#single-articale-details h5:empty,
+#single-articale-details h6:empty {
+  display: none;
+}
+
+/* Also target tags that contain only a <br> */
+#single-articale-details p:has(br:only-child),
+#single-articale-details h1:has(br:only-child),
+#single-articale-details h2:has(br:only-child),
+#single-articale-details h3:has(br:only-child),
+#single-articale-details h4:has(br:only-child),
+#single-articale-details h5:has(br:only-child),
+#single-articale-details h6:has(br:only-child) {
+  display: none;
+}
+
+/* List formatting */
+#single-articale-details ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+#single-articale-details ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#single-articale-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* code block start */
+/* Container: black background, rounded, padding */
+.ql-code-block-container {
+  margin: 1rem 0;
+  background-color: #1e1e1e; /* VS Code-like dark background */
+  border: 1px solid #333;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+}
+
+/* Each line of code */
+.ql-code-block {
+  font-family:
+    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: pre; /* preserve spaces */
+  color: #d4d4d4; /* default light text */
+}
+
+/* Alternate line backgrounds (optional) */
+.ql-code-block:nth-child(odd) {
+  background-color: #252526;
+}
+
+.ql-code-block:nth-child(even) {
+  background-color: #1e1e1e;
+}
+
+/* Color specific lines by their order (just example colors) */
+.ql-code-block:nth-child(1) {
+  color: #ffa1f7; /* pinkish */
+}
+
+.ql-code-block:nth-child(2) {
+  color: #dcdcaa; /* yellowish */
+}
+
+.ql-code-block:nth-child(3) {
+  color: #54c3ff; /* blue */
+}
+
+/* Ensure empty lines preserve height */
+.ql-code-block:empty::before {
+  content: "\00a0";
+}
+
+/* code block end  */
+
+/* end  */
+
+/* table start  */
+
+/* Container (adds horizontal scroll on small screens) */
+#single-articale-details {
+  --table-border: #e6e9ee;
+  --table-bg: #fff;
+  --accent: var(--theme-default-primary);
+  --muted: #6b7280;
+  color-scheme: light; /* allows consistent form controls in some browsers */
+}
+
+#single-articale-details table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.01), transparent);
+  padding: 0.4rem;
+}
+
+/* Basic table reset */
+#single-articale-details table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: var(--table-bg);
+  box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.03) inset;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+/* Head */
+#single-articale-details table thead th {
+  background: linear-gradient(
+    180deg,
+    rgba(249, 80, 8, 0.06),
+    rgba(249, 80, 8, 0.02)
+  );
+  color: #0f172a;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--table-border);
+  position: sticky;
+  top: 0; /* keeps header visible when wrapper scrolls */
+  z-index: 1;
+}
+#single-articale-details table tbody tr td {
+  font-weight: 400 !important;
+}
+
+/* Cells */
+#single-articale-details table th,
+#single-articale-details table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--table-border);
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+/* Zebra rows */
+#single-articale-details table tbody tr:nth-child(odd) {
+  background: rgba(15, 23, 42, 0.02);
+}
+
+/* Hover highlight */
+#single-articale-details table tbody tr:hover {
+  background: rgba(249, 80, 8, 0.04);
+  transition: background-color 120ms ease;
+}
+
+/* First column emphasis (optional) */
+#single-articale-details table tbody td:first-child {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Small screens: make fonts a bit smaller and allow wrapping */
+@media (max-width: 640px) {
+  #single-articale-details table th,
+  #single-articale-details table td {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Caption style (if your HTML contains <caption>) */
+#single-articale-details table caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 0.4rem 0.75rem;
+  font-style: italic;
+}
+
+/* Optional: style for selected cells (useful if Quill adds selection classes) */
+#single-articale-details td.ql-selected,
+#single-articale-details td.is-selected {
+  outline: 2px solid rgba(249, 80, 8, 0.25);
+  background: rgba(249, 80, 8, 0.06);
+}
+
+/* Accessibility: focusable cells (if you make them tabbable) */
+#single-articale-details td:focus {
+  outline: 3px solid rgba(249, 80, 8, 0.18);
+  outline-offset: 1px;
+}
+
+/* table end  */
