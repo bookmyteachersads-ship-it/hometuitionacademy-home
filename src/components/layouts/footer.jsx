@@ -140,7 +140,7 @@ export const Footer = () => {
       setLoading(false);
       successToast("Thanks for subscribing");
     } catch (error) {
-      errorToast("Failed to subscribe!");
+      errorToast(error?.message || "Failed to subscribe!");
       setLoading(false);
     }
   };
