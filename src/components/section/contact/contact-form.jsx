@@ -36,7 +36,7 @@ const ContactForm = () => {
       setLoading(false);
       successToast("Query submitted");
     } catch (error) {
-      errorToast("Failed to submit query!");
+      errorToast(error?.message || "Failed to submit query!");
       setLoading(false);
     }
   };
@@ -138,7 +138,7 @@ const ContactForm = () => {
                   data-original="#000000"
                 />
               </svg>
-              <a
+              
                 href="mailto:hometuitionsnearme@gmail.com"
                 className="text-sm ml-4"
               >
