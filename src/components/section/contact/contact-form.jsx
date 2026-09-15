@@ -138,7 +138,7 @@ const ContactForm = () => {
                   data-original="#000000"
                 />
               </svg>
-              
+              <a
                 href="mailto:hometuitionsnearme@gmail.com"
                 className="text-sm ml-4"
               >
