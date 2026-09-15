@@ -1,5 +1,17 @@
 import axios from "axios";
 
+// If this is missing/undefined, every request below silently becomes a
+// request to "undefined/api/..." which always fails. Make that obvious
+// in the console instead of a generic toast, so it's easy to confirm
+// whether BACKEND_API_BASE_URL is actually set in Vercel > Settings >
+// Environment Variables (Production) for THIS project.
+if (!process.env.BACKEND_API_BASE_URL && typeof window !== "undefined") {
+  console.error(
+    "[config] BACKEND_API_BASE_URL is not set. Forms and blog/service data will fail. " +
+      "Check Vercel > Project Settings > Environment Variables (Production) and redeploy."
+  );
+}
+
 export async function getSinglePost(slug) {
   try {
     const response = await axios({
@@ -45,7 +57,14 @@ export async function subscribeNewsletter(payload) {
     });
     return response?.data;
   } catch (error) {
-    throw new Error(`Failed to subscribe: ${error}`);
+    console.error(
+      "Newsletter subscribe failed:",
+      error?.response?.status,
+      error?.response?.data || error.message
+    );
+    throw new Error(
+      error?.response?.data?.message || `Failed to subscribe: ${error}`
+    );
   }
 }
 
@@ -58,6 +77,18 @@ export async function contactSubmit(payload) {
     });
     return response?.data;
   } catch (error) {
-    throw new Error(`Failed to subscribe: ${error}`);
+    // Log the REAL reason (status code + backend message + whether the URL
+    // was even valid) instead of hiding it behind a generic toast. Check
+    // the browser console next time the form fails.
+    console.error(
+      "Contact form submit failed:",
+      error?.response?.status,
+      error?.response?.data || error.message,
+      "Request URL was:",
+      `${process.env.BACKEND_API_BASE_URL}/api/public/query`
+    );
+    throw new Error(
+      error?.response?.data?.message || `Failed to submit: ${error}`
+    );
   }
 }
